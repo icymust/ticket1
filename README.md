@@ -19,6 +19,9 @@ vi /etc/sysconfig/network-scripts/ifcfg-ens18
 `Перезапустить сетевые данные -`
 systemctl restart NetworkManager
 
+`Установка Гита` -
+dnf -y install git
+
 `Скачивания файла` -
 git clone https://github.com/icymust/ticket1
 
