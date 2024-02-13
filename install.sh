@@ -1,9 +1,10 @@
-dnf -y install wget unzip httpd epel-releasesudo 
+dnf -y install wget unzip httpd
 setenforce 0
 sed -i 's/^SELINUX=.*/SELINUX=permissive/g' /etc/selinux/config
 systemctl enable --now httpd 
 dnf -y install http://rpms.remirepo.net/enterprise/remi-release-8.rpmsudo
 dnf update
+dnf -y install epel-release
 dnf module reset php
 sudo dnf module reset php
 dnf module enable php:remi-8.0
