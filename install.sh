@@ -11,7 +11,7 @@ dnf module enable php:remi-8.0
 dnf -y install php php-cli php-mysqlnd php-zip php-devel php-gd php-mcrypt php-mbstring php-curl php-xml php-pear php-bcmath php-json php-pdo php-pecl-apcu php-pecl-apcu-devel php-ldap
 dnf install mariadb-server mariadb
 systemctl enable --now mariadb
-mysql -u root -p
+mysql -u root
 CREATE USER 'jkisp23'@'localhost' IDENTIFIED BY "jkisp23";
 CREATE DATABASE jkisp23db;
 GRANT ALL PRIVILEGES ON jkisp23db.* TO 'jkisp23'@'localhost';
