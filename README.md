@@ -1,7 +1,6 @@
-# Ticket №1 Nextcloud 
+# Ticket №6 Nextcloud 
 
-> Установка и первичная настройка Nextcloud на Rocky. Закрытие служебных портов на ОС с
-> Nextcloud. Смена SSH порта на 22128. Написание документации
+> Установкап и настройка bind на rocky8. Настройка тестовой зоны Exam.Local и привязка его к тестовому ugin серверу. Написание кортокой документации.
 
 > Нужные команды для установки и запуска скрипта ниже
 
@@ -23,7 +22,7 @@ systemctl restart NetworkManager
 dnf -y install git
 
 `Скачивания файла` -
-git clone https://github.com/icymust/ticket1
+git clone https://github.com/icymust/ticket6
 
 `Разрешение доступа файлам -`
 chmod -R 777 . 
