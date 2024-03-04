@@ -5,8 +5,7 @@ echo "192.168.1. node2.server node2" >> /etc/hosts
 dnf install -y haproxy 
 cp /etc/haproxy/haproxy.cfg{,.old}
 
-sudo nano /etc/haproxy/haproxy.cfg
-
+echo "
 global 
   log 127.0.0.1 local2 
   chroot /var/lib/haproxy 
@@ -59,12 +58,17 @@ listen stats
   stats show-node # Shows the hostname of the node 
   stats auth admin:pass 
   stats uri /stats # Statistics URL
+" > /etc/haproxy/haproxy.cfg
 
 haproxy -c -f /etc/haproxy/haproxy.cfg
-nano /etc/rsyslog.conf
-  -> module(load="imudp")
-  ->input(type="imudp")
 rsyslogd -N1
-systemctl restart rsyslog
-systemctl restart haproxy
-systemctl enable --now haproxy
+
+echo "
+  _________ vi /etc/hosts -> vpisat ip node1,2,master ________
+  _____ vi /etc/haproxy/haproxy.cfg -> pomenjat
+  _____ vi /etc/rsyslog.conf -> module(load="imudp")
+  ------  -> input(type="imudp")  uncomment----------
+  _____systemctl restart rsyslog______
+  _____systemctl restart haproxy______
+  _____systemctl enable --now haproxy_____
+"
