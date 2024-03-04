@@ -65,9 +65,10 @@ rsyslogd -N1
 
 echo "
   _________ vi /etc/hosts -> vpisat ip node1,2,master ________
-  _____ vi /etc/haproxy/haproxy.cfg -> pomenjat
   _____ vi /etc/rsyslog.conf -> module(load="imudp")
   ------  -> input(type="imudp")  uncomment----------
+  ------ -> *.info;mail.none;authpriv.none;cron.none;local2.none /var/log/messages 
+  ------ local2.* /var/log/haproxy.log 
   _____systemctl restart rsyslog______
   _____systemctl restart haproxy______
   _____systemctl enable --now haproxy_____
