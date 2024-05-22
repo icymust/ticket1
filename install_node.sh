@@ -15,10 +15,10 @@ http.createServer(function (req, res) {
 }).listen(port, function () { 
   console.log(`Server is running on ${port}`); 
 
-}); " > hello.js
+}); " > examLocal.js
 
 echo "
 _________ vi /etc/hosts -> vpisat ip node1,2,master ________
-_________ vi hello.js -> pomenjat text na Node2 ________
+_________ vi examLocal.js -> pomenjat text na Node2 ________
 _________ node hello.js ________
 "
