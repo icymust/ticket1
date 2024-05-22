@@ -20,5 +20,5 @@ http.createServer(function (req, res) {
 echo "
 _________ vi /etc/hosts -> vpisat ip node1,2,master ________
 _________ vi examLocal.js -> pomenjat text na Node2 ________
-_________ node hello.js ________
+_________ node examLocal.js ________
 "
